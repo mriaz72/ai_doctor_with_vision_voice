@@ -89,5 +89,5 @@ def text_to_speech_with_gtts_autoplay(input_text, output_file):
     else:  # Linux
         subprocess.run(["xdg-open", output_file])
 
-input_text = "Hello, I am Riaz, your virtual doctor. How can I assist you today?"
-text_to_speech_with_gtts_autoplay(input_text, "doctor_voice_autoplay.mp3")
+#input_text = "Hello, I am Riaz, your virtual doctor. How can I assist you today?"
+#text_to_speech_with_gtts_autoplay(input_text, "doctor_voice_autoplay2.mp3")

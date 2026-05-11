@@ -37,7 +37,8 @@ def record_audio(file_path, timeout = 20, phrase_time_limit = None):
     except Exception as e:
         logging.error(f"An error occurred while recording audio: {e}")
 
-#record_audio("user_voice.mp3")
+#file_path = "user_voice.mp3"
+#record_audio(file_path)
 
 # setup speech to text model for transcribing the recorded audio
 from groq import Groq
@@ -60,7 +61,7 @@ def transcribe_audio_with_groq(stt_model, file_path, GROQ_API_KEY):
 
     return transcription.text
 
-
+#print(transcribe_audio_with_groq(stt_model, file_path, GROQ_API_KEY))
 
 
 

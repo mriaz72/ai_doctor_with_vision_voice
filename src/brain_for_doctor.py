@@ -11,6 +11,9 @@ def encoded_image(image_path):
     image_file = open(image_path, "rb")
     return base64.b64encode(image_file.read()).decode("utf-8")
 
+#image_path = "images/acne.jpg"
+#encoded_image_str = encoded_image(image_path)
+
 # setup multimodel llm
 from groq import Groq
 client = Groq(api_key=GROQ_API_KEY)
@@ -40,3 +43,5 @@ def analyze_image_with_groq(query, encoded_image, model):
         model=model, 
         messages=message)
     return chat_completion.choices[0].message.content
+
+#print(analyze_image_with_groq(query, encoded_image_str, model))
